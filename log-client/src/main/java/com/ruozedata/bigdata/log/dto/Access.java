@@ -27,22 +27,20 @@ public class Access {
 
     @Override
     public String toString() {
-        return "Access{" +
-                "dateStr='" + dateStr + '\'' +
-                ", ipStr='" + ipStr + '\'' +
-                ", agentIp='" + agentIp + '\'' +
-                ", responseTime=" + responseTime +
-                ", referer='" + referer + '\'' +
-                ", method='" + method + '\'' +
-                ", url='" + url + '\'' +
-                ", methodUrl='" + methodUrl + '\'' +
-                ", httpCode=" + httpCode +
-                ", requestSize=" + requestSize +
-                ", responseSize='" + responseSize + '\'' +
-                ", cacheStatus='" + cacheStatus + '\'' +
-                ", uaHead='" + uaHead + '\'' +
-                ", type='" + type + '\'' +
-                '}';
+        return dateStr + "\t" +
+                ipStr + "\t" +
+                agentIp + "\t" +
+                responseTime + "\t" +
+                referer + "\t" +
+                method + "\t" +
+                url + "\t" +
+                methodUrl + "\t" +
+                httpCode + "\t" +
+                requestSize + "\t" +
+                responseSize + "\t" +
+                cacheStatus + "\t" +
+                uaHead + "\t" +
+                type;
     }
 
 

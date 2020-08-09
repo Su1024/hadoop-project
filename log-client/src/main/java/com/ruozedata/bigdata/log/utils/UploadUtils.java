@@ -19,14 +19,15 @@ public class UploadUtils {
         try {
             URL url = new URL(path);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-
             connection.setRequestMethod("POST");
             connection.setDoOutput(true);
             connection.setRequestProperty("Content-Type", "application/text");
-            OutputStream outputStream = connection.getOutputStream();
-            outputStream.write(data.getBytes());
-            outputStream.flush();
-            outputStream.close();
+            OutputStream out = connection.getOutputStream();
+            out.write(data.getBytes());
+            out.flush();
+            out.close();
+            int responseCode = connection.getResponseCode();
+            System.out.println(responseCode);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {

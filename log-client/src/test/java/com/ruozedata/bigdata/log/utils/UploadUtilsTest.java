@@ -13,6 +13,7 @@ public class UploadUtilsTest {
         for (int i = 0; i < 100; i++) {
             Access access = new Access();
             access.setAgentIp(i + "ip123");
+            System.out.println(access);
             UploadUtils.upload(URL, access.toString());
         }
     }
